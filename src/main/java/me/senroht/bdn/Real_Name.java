@@ -43,10 +43,10 @@ public class Real_Name extends Command
                     }
                 }
                 if(sp != null){
-                    commandSender.sendMessage(main.pluginTag + sp.getDisplayName() + "'s real name is " + sp.getName());
+                    commandSender.sendMessage(main.pluginTag + sp.getDisplayName() + ChatColor.RESET + "'s real name is " + sp.getName());
                 }
                 else{
-                    commandSender.sendMessage(main.pluginTag + strings[0] + " could not be found.");
+                    commandSender.sendMessage(main.pluginTag + strings[0] + ChatColor.RESET + " could not be found.");
                 }
             }
             else{
