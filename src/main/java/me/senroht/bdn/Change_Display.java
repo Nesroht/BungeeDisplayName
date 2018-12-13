@@ -141,7 +141,7 @@ public class Change_Display extends Command
                             String colorStrip = ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', newName));
                             if( colorStrip.length() <= main.configuration.getInt("Length")){
                                 main.Change_Display_Name(sp, newName);
-                                commandSender.sendMessage(main.pluginTag + "You changed " + sp.getName() + "'s name to: " + sp.getDisplayName());
+                                commandSender.sendMessage(main.pluginTag + "You changed " + sp.getName() + ChatColor.RESET + "'s name to: " + sp.getDisplayName());
                                 sp.sendMessage(main.pluginTag + "Your name was changed to: " + sp.getDisplayName());
                             }
                             else{
@@ -151,7 +151,7 @@ public class Change_Display extends Command
                         }
                         else{
                             main.Change_Display_Name(sp, newName);
-                            commandSender.sendMessage(main.pluginTag + "You changed " + sp.getName() + "'s name to: " + sp.getDisplayName());
+                            commandSender.sendMessage(main.pluginTag + "You changed " + sp.getName() + ChatColor.RESET + "'s name to: " + sp.getDisplayName());
                             sp.sendMessage(main.pluginTag + "Your name was changed to: " + sp.getDisplayName());
                         }
                     }
