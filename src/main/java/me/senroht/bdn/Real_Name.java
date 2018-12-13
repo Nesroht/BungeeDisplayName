@@ -1,5 +1,6 @@
 package me.senroht.bdn;
 
+import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Command;
@@ -37,7 +38,7 @@ public class Real_Name extends Command
             if(strings.length == 1){
                 ProxiedPlayer sp = null;
                 for(ProxiedPlayer p : main.getProxy().getPlayers()){
-                    if(p.getName().toLowerCase().contains(strings[0].toLowerCase())){
+                    if(ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', p.getDisplayName())).toLowerCase().matches(strings[0].toLowerCase())){
                         sp = p;
                     }
                 }
