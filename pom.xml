@@ -6,7 +6,7 @@
 
     <groupId>me.senroht</groupId>
     <artifactId>BungeeDisplayName</artifactId>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <repositories>
         <repository>
             <id>bungeecord-repo</id>
