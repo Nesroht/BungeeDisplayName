@@ -1,0 +1,50 @@
+#
+# Default Config.
+#
+#Config_Version: Please do not change.
+Config_Version: 1
+
+#
+# The tag that the plugin will show with commands.
+#
+Plugin_Tag: '&f&l[&9BDN&f&l]&r '
+
+#
+# Permissions.
+#
+#Need permissions: will use a permissions plugin, if you do not have a permission plugin please set this to false.
+Need_Permissions: true
+#
+# bdn.changeName | The /nickname command.
+# bdn.realname | The /realName command.
+# bdn.resetname | The /resetname command.
+# bdn.color | Allows color for the player.
+# PERMISSION FOR SETTING NICK OF OTHERS
+# bdn.changename.others
+
+#
+# Whitelist Servers.
+#
+#Whitelist_On: If true displaynames will only work on those servers.
+Whitelist_On: false
+#Whitelisted_Servers: Server names from your bungee config.
+Whitelisted_Servers:
+  - 'Server'
+  - 'Names'
+  - 'Here'
+
+#
+# Nicknames.
+#
+#Use_Prefix: Use prefix before the display name.
+Use_Prefix: true
+#Prefix: prefix before the display name.
+Prefix: '&9+'
+#Length_Limit: if true will check the length.
+Length_Limit: true
+#Length: will disallow any nicknames with more then that amount.
+Length: 16
+#Use_Colors: will convert color codes if set to true.
+Use_Colors: true
+#Allow_Spaces: will allow more then one word in display names.
+Allow_Spaces: true
