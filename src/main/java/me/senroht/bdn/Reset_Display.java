@@ -52,7 +52,7 @@ public class Reset_Display extends Command
             }
             else{
                 for(ProxiedPlayer p : main.getProxy().getPlayers()){
-                    if(p.getName().toLowerCase().matches(strings[0].toLowerCase())){
+                    if(p.getName().toLowerCase().equalsIgnoreCase(strings[0].toLowerCase())){
                         sp = p;
                     }
                 }

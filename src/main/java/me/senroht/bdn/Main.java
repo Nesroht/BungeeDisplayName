@@ -42,6 +42,7 @@ public class Main extends Plugin
         getProxy().getPluginManager().registerCommand(this, new Change_Display(this));
         getProxy().getPluginManager().registerCommand(this, new Real_Name(this));
         getProxy().getPluginManager().registerCommand(this, new Reset_Display(this));
+        getProxy().getPluginManager().registerCommand(this, new Admin_Options(this));
         getProxy().getPluginManager().registerListener(this, new me.senroht.bdn.Listener(this));
 
         Load_Config();
@@ -135,10 +136,12 @@ public class Main extends Plugin
             displayName = ChatColor.translateAlternateColorCodes('&', displayName);
         }
         if(configuration.getBoolean("Use_Prefix")){
-            String prefix = configuration.getString("Prefix");
-            prefix = ChatColor.translateAlternateColorCodes('&', prefix);
-            //Add prefix + Reset the color + Add display name + Reset the color.
-            displayName = prefix + ChatColor.RESET + displayName + ChatColor.RESET;
+            if(!p.getName().equalsIgnoreCase(displayName)){
+                String prefix = configuration.getString("Prefix");
+                prefix = ChatColor.translateAlternateColorCodes('&', prefix);
+                //Add prefix + Reset the color + Add display name + Reset the color.
+                displayName = prefix + ChatColor.RESET + displayName + ChatColor.RESET;
+            }
         }
         p.setDisplayName(displayName);
     }

@@ -103,7 +103,7 @@ public class Change_Display extends Command
                 }
                 else {
                     for (ProxiedPlayer p : main.getProxy().getPlayers()) {
-                        if (p.getName().toLowerCase().contains(strings[0].toLowerCase())) {
+                        if (p.getName().toLowerCase().equalsIgnoreCase(strings[0].toLowerCase())) {
                             sp = p;
                         }
                     }
@@ -156,7 +156,7 @@ public class Change_Display extends Command
         else{
             ProxiedPlayer sp = null;
             for(ProxiedPlayer p : main.getProxy().getPlayers()){
-                if(p.getName().toLowerCase().matches(strings[0].toLowerCase())){
+                if(p.getName().toLowerCase().equalsIgnoreCase(strings[0].toLowerCase())){
                     sp = p;
                 }
             }
@@ -258,11 +258,13 @@ public class Change_Display extends Command
                             if (colorStrip.length() <= main.configuration.getInt("Length")) {
                                 main.Change_Display_Name(pp, newName);
                                 pp.sendMessage(main.pluginTag + "Changed your display name to: " + pp.getDisplayName());
-                            } else {
-                                commandSender.sendMessage("The new name is: " + newName.length());
+                            }
+                            else {
+                                commandSender.sendMessage("The new name is: " + colorStrip.length());
                                 commandSender.sendMessage("But it must be under or equal to: " + main.configuration.getInt("Length"));
                             }
-                        } else {
+                        }
+                        else {
                             main.Change_Display_Name(pp, newName);
                             pp.sendMessage(main.pluginTag + "Changed your display name to: " + pp.getDisplayName());
                         }

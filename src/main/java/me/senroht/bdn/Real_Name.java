@@ -35,23 +35,75 @@ public class Real_Name extends Command
             commandSender.sendMessage(main.pluginTag + "Player name needed.");
         }
         else{
-            if(strings.length == 1){
-                ProxiedPlayer sp = null;
-                for(ProxiedPlayer p : main.getProxy().getPlayers()){
-                    if(ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', p.getDisplayName())).toLowerCase().matches(strings[0].toLowerCase())){
-                        sp = p;
+            ProxiedPlayer sp = null;
+            if (main.configuration.getBoolean("Use_Prefix")){
+                if (main.configuration.getBoolean("Allow_Spaces")){
+                    String fullName = "";
+                    for(int i = 0; i < strings.length; i++)
+                    {
+                        fullName += strings[i] + " ";
+                    }
+                    fullName = fullName.trim();
+                    for(ProxiedPlayer p : main.getProxy().getPlayers()){
+                        if(ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', p.getDisplayName())).substring(ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', main.configuration.getString("Prefix"))).length()).toLowerCase().equalsIgnoreCase(fullName.toLowerCase())){
+                            sp = p;
+                        }
+                    }
+                    if(sp != null){
+                        commandSender.sendMessage(main.pluginTag + sp.getDisplayName() + ChatColor.RESET + "'s real name is " + sp.getName());
+                    }
+                    else{
+                        commandSender.sendMessage(main.pluginTag + strings[0] + ChatColor.RESET + " could not be found.");
                     }
                 }
-                if(sp != null){
-                    commandSender.sendMessage(main.pluginTag + sp.getDisplayName() + ChatColor.RESET + "'s real name is " + sp.getName());
-                }
                 else{
-                    commandSender.sendMessage(main.pluginTag + strings[0] + ChatColor.RESET + " could not be found.");
+                    for(ProxiedPlayer p : main.getProxy().getPlayers()){
+                        if(ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', p.getDisplayName())).substring(ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', main.configuration.getString("Prefix"))).length()).toLowerCase().equalsIgnoreCase(strings[0].toLowerCase())){
+                            sp = p;
+                        }
+                    }
+                    if(sp != null){
+                        commandSender.sendMessage(main.pluginTag + sp.getDisplayName() + ChatColor.RESET + "'s real name is " + sp.getName());
+                    }
+                    else{
+                        commandSender.sendMessage(main.pluginTag + strings[0] + ChatColor.RESET + " could not be found.");
+                    }
                 }
             }
             else{
-                commandSender.sendMessage(main.pluginTag + "Command only takes 1 player name");
+                if (main.configuration.getBoolean("Allow_Spaces")){
+                    String fullName = "";
+                    for(int i = 0; i < strings.length; i++)
+                    {
+                        fullName += strings[i] + " ";
+                    }
+                    fullName = fullName.trim();
+                    for(ProxiedPlayer p : main.getProxy().getPlayers()){
+                        if(ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', p.getDisplayName())).toLowerCase().equalsIgnoreCase(fullName.toLowerCase())){
+                            sp = p;
+                        }
+                    }
+                    if(sp != null){
+                        commandSender.sendMessage(main.pluginTag + sp.getDisplayName() + ChatColor.RESET + "'s real name is " + sp.getName());
+                    }
+                    else{
+                        commandSender.sendMessage(main.pluginTag + strings[0] + ChatColor.RESET + " could not be found.");
+                    }
+                }
+                else {
+                    for (ProxiedPlayer p : main.getProxy().getPlayers()) {
+                        if (ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', p.getDisplayName())).toLowerCase().equalsIgnoreCase(strings[0].toLowerCase())) {
+                            sp = p;
+                        }
+                    }
+                    if (sp != null) {
+                        commandSender.sendMessage(main.pluginTag + sp.getDisplayName() + ChatColor.RESET + "'s real name is " + sp.getName());
+                    } else {
+                        commandSender.sendMessage(main.pluginTag + strings[0] + ChatColor.RESET + " could not be found.");
+                    }
+                }
             }
+
         }
     }
 }
