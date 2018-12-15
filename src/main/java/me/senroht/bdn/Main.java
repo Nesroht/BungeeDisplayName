@@ -122,12 +122,19 @@ public class Main extends Plugin
     //*** Nickname ***
     public void Check_Display_Name(ProxiedPlayer p){
         Load_Player_Config(); //Load
-        if(playerConfig.get(p.getUniqueId().toString()) == null){
-            playerConfig.set(p.getUniqueId().toString(), p.getDisplayName());
-            Save_Player_Config(); //Re
-            Load_Player_Config(); //Load
+        if(!p.getName().equalsIgnoreCase(p.getDisplayName())){
+            if(playerConfig.get(p.getUniqueId().toString()) == null){
+                playerConfig.set(p.getUniqueId().toString(), p.getDisplayName());
+                Save_Player_Config(); //Re
+                Load_Player_Config(); //Load
+            }
+            Set_Display_Name(p);
         }
-        Set_Display_Name(p);
+        else{
+            Save_Player_Config();
+            Load_Player_Config();
+        }
+
     }
     public void Set_Display_Name(ProxiedPlayer p){
         String displayName = null;

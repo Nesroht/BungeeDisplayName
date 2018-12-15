@@ -1,6 +1,7 @@
 package me.senroht.bdn;
 
 import net.md_5.bungee.api.CommandSender;
+import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Command;
 
 public class Admin_Options extends Command {
@@ -16,7 +17,11 @@ public class Admin_Options extends Command {
             if(main.configuration.getBoolean("Need_Permissions")) {
                 if (commandSender.hasPermission("bdn.admin.reload")) {
                     main.Load_Config();
-                    main.Load_Player_Config();
+                    for (ProxiedPlayer p : main.getProxy().getPlayers()) {
+                        if (!p.getName().equals(p.getDisplayName())) {
+                            main.Check_Display_Name(p);
+                        }
+                    }
                     commandSender.sendMessage(main.pluginTag + "Reloaded configs! (If any were removed they have been regenerated)");
                 }
                 else{
