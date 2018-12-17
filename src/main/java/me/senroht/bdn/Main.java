@@ -133,12 +133,18 @@ public class Main extends Plugin
         else{
             Save_Player_Config();
             Load_Player_Config();
+            Set_Display_Name(p);
         }
 
     }
     public void Set_Display_Name(ProxiedPlayer p){
         String displayName = null;
-        displayName = playerConfig.getString(p.getUniqueId().toString(), ", ");
+        if (playerConfig.getString(p.getUniqueId().toString()) == ""){
+            displayName = p.getName();
+        }
+        else{
+            displayName = playerConfig.getString(p.getUniqueId().toString(), ", ");
+        }
         if(configuration.getBoolean("Use_Colors")){
             displayName = ChatColor.translateAlternateColorCodes('&', displayName);
         }

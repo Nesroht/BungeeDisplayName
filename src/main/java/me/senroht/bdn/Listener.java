@@ -20,12 +20,19 @@ public class Listener implements net.md_5.bungee.api.plugin.Listener {
                 main.Load_Player_Config(); //Reload the players
                 main.Check_Display_Name(e.getPlayer());
             }
-        }else{
+        }
+        else{
             main.Load_Player_Config(); //Reload the players
             main.Check_Display_Name(e.getPlayer());
         }
 
         //Tell who and what
-        main.getLogger().info("Player (" + e.getPlayer() + ") logged in with display name of: " + main.playerConfig.get(e.getPlayer().getUniqueId().toString()));
+        if (main.playerConfig.get(e.getPlayer().getUniqueId().toString()) != "null"){
+            main.getLogger().info("Player (" + e.getPlayer() + ") logged in with display name of: " + main.playerConfig.get(e.getPlayer().getUniqueId().toString()));
+        }
+        else{
+            main.getLogger().info("Player (" + e.getPlayer() + ") logged in with no set display name");
+        }
+
     }
 }
