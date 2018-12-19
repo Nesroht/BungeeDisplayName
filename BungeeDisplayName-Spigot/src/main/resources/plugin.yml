@@ -1,0 +1,24 @@
+#
+# Plugin Info
+#
+
+name: BungeeDisplayName
+main: me.senroht.spigot.bdn.Main
+version: 1.2.0
+author: Senroht
+email: sebastianhoye@gmail.com
+commands:
+  nick:
+    description: Changes the nickname of yourself or others.
+    usage: /<command>
+    aliases: nickname
+  unnick:
+    description: Reset the nickname of yourself or others.
+    usage: /<command>
+    aliases: resetname
+  bdn:
+    description: Prefix for admin commands, for example reload.
+    usage: /<command>
+  realname:
+    description: Reveals the real name of a given nickname (ignores colorcodes).
+    usage: /<command>

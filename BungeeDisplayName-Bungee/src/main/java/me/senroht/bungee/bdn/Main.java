@@ -39,10 +39,10 @@ public class Main extends Plugin
         getLogger().info("");
 
 
-        getProxy().getPluginManager().registerCommand(this, new Change_Display(this));
-        getProxy().getPluginManager().registerCommand(this, new Real_Name(this));
-        getProxy().getPluginManager().registerCommand(this, new Reset_Display(this));
-        getProxy().getPluginManager().registerCommand(this, new Admin_Options(this));
+        getProxy().getPluginManager().registerCommand(this, new ChangeDisplay(this));
+        getProxy().getPluginManager().registerCommand(this, new RealName(this));
+        getProxy().getPluginManager().registerCommand(this, new ResetDisplay(this));
+        getProxy().getPluginManager().registerCommand(this, new AdminOptions(this));
         getProxy().getPluginManager().registerListener(this, new Listener(this));
 
         Load_Config();
