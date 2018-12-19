@@ -1,4 +1,4 @@
-package me.senroht.bdn;
+package me.senroht.bungee.bdn;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
@@ -6,11 +6,11 @@ import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Command;
 
 @SuppressWarnings("ALL")
-public class Real_Name extends Command
+public class RealName extends Command
 {
     Main main;
 
-    public Real_Name(Main main)
+    public RealName(Main main)
     {
         super("realname");
         this.main = main;

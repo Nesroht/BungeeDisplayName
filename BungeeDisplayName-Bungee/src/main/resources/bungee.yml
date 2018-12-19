@@ -1,0 +1,15 @@
+#
+# Plugin Info
+#
+
+name: BungeeDisplayName
+main: Main
+version: 1.1.3
+author: Senroht
+email: sebastianhoye@gmail.com
+commands:
+  unnick: Lets you remove the nickname of you or others
+  nick: Lets you set the nickname of you or others
+  nickname: LEts you set the nickname of you or others
+  realname: Lets you see the realname linked to a nickname
+  bdn reload: Lets you reload the config files for BungeeDisplayName

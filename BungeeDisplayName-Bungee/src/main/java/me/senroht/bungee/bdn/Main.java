@@ -1,4 +1,4 @@
-package me.senroht.bdn;
+package me.senroht.bungee.bdn;
 
 
 import net.md_5.bungee.api.ChatColor;
@@ -43,7 +43,7 @@ public class Main extends Plugin
         getProxy().getPluginManager().registerCommand(this, new Real_Name(this));
         getProxy().getPluginManager().registerCommand(this, new Reset_Display(this));
         getProxy().getPluginManager().registerCommand(this, new Admin_Options(this));
-        getProxy().getPluginManager().registerListener(this, new me.senroht.bdn.Listener(this));
+        getProxy().getPluginManager().registerListener(this, new Listener(this));
 
         Load_Config();
         Load_Player_Config();

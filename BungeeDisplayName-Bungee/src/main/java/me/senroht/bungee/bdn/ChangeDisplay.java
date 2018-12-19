@@ -1,4 +1,4 @@
-package me.senroht.bdn;
+package me.senroht.bungee.bdn;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
@@ -6,11 +6,11 @@ import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Command;
 
 @SuppressWarnings("ALL")
-public class Change_Display extends Command
+public class ChangeDisplay extends Command
 {
     Main main;
 
-    public Change_Display(Main main)
+    public ChangeDisplay(Main main)
     {
         super("nickname", "", "nick");
         this.main = main;
@@ -276,5 +276,4 @@ public class Change_Display extends Command
             }
         }
     }
-
 }

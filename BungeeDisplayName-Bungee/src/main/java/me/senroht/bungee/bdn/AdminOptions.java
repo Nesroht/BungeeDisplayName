@@ -1,12 +1,12 @@
-package me.senroht.bdn;
+package me.senroht.bungee.bdn;
 
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Command;
 
-public class Admin_Options extends Command {
+public class AdminOptions extends Command {
     Main main;
-    public Admin_Options(Main main)
+    public AdminOptions(Main main)
     {
         super("bdn", "", "BungeeDisplayName");
         this.main = main;

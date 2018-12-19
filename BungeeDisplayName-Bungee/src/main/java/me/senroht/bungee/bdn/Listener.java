@@ -1,4 +1,4 @@
-package me.senroht.bdn;
+package me.senroht.bungee.bdn;
 
 import net.md_5.bungee.api.event.ServerConnectedEvent;
 import net.md_5.bungee.event.EventHandler;
@@ -27,7 +27,7 @@ public class Listener implements net.md_5.bungee.api.plugin.Listener {
         }
 
         //Tell who and what
-        if (main.playerConfig.get(e.getPlayer().getUniqueId().toString()) != "null"){
+        if (main.playerConfig.get(e.getPlayer().getUniqueId().toString()) != null){
             main.getLogger().info("Player (" + e.getPlayer() + ") logged in with display name of: " + main.playerConfig.get(e.getPlayer().getUniqueId().toString()));
         }
         else{
