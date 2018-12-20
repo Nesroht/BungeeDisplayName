@@ -4,24 +4,24 @@
     <parent>
         <groupId>me.senroht.bdn</groupId>
         <artifactId>BungeeDisplayName</artifactId>
-        <version>1.2.0</version>
+        <version>1.2.1</version>
     </parent>
     <artifactId>BungeeDisplayName-Master</artifactId>
     <dependencies>
         <dependency>
             <groupId>me.senroht.bdn</groupId>
             <artifactId>BungeeDisplayName-Spigot</artifactId>
-            <version>1.2.0</version>
+            <version>1.2.1</version>
         </dependency>
         <dependency>
             <groupId>me.senroht.bdn</groupId>
             <artifactId>BungeeDisplayName-Bungee</artifactId>
-            <version>1.2.0</version>
+            <version>1.2.1</version>
         </dependency>
         <dependency>
             <groupId>me.senroht.bdn</groupId>
             <artifactId>BungeeDisplayName-Sponge</artifactId>
-            <version>1.2.0</version>
+            <version>1.2.1</version>
         </dependency>
     </dependencies>
     <build>

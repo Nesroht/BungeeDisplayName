@@ -12,7 +12,7 @@ import org.spongepowered.api.text.Text;
 import org.spongepowered.api.command.CommandManager;
 
 
-@Plugin(id = "bungeedisplayname", name = "BungeeDisplayName", version = "1.1.3", description = "Plugin to set nickname over Bungeecord")
+@Plugin(id = "bungeedisplayname", name = "BungeeDisplayName", version = "1.2.1", description = "Plugin to set nickname over Bungeecord")
 public class Main {
 
     @Inject

@@ -2,15 +2,15 @@ package me.senroht.bungee.bdn;
 
 
 import net.md_5.bungee.api.ChatColor;
+import net.md_5.bungee.api.ProxyServer;
+import net.md_5.bungee.api.config.ServerInfo;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.config.Configuration;
 import net.md_5.bungee.config.ConfigurationProvider;
 import net.md_5.bungee.config.YamlConfiguration;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.file.Files;
 
 @SuppressWarnings("ALL")
@@ -146,7 +146,7 @@ public class Main extends Plugin
             displayName = playerConfig.getString(p.getUniqueId().toString(), ", ");
         }
         if(configuration.getBoolean("Use_Colors")){
-            displayName = ChatColor.translateAlternateColorCodes('&', displayName);
+            displayName = ChatColor.translateAlternateColorCodes('&', displayName) + ChatColor.RESET;
         }
         if(configuration.getBoolean("Use_Prefix")){
             if(!p.getName().equalsIgnoreCase(displayName)){
@@ -156,6 +156,18 @@ public class Main extends Plugin
                 displayName = prefix + ChatColor.RESET + displayName + ChatColor.RESET;
             }
         }
+        String forwardstr = p.getName() + ", " + displayName;
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        DataOutputStream out = new DataOutputStream(bytes);
+        ServerInfo server = ProxyServer.getInstance().getPlayer(p.getName()).getServer().getInfo();
+        try {
+            //Write the data
+            out.writeUTF("BungeeDisplayName");
+            out.writeUTF(forwardstr); // Write out the rest of the data.
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        server.sendData("BungeeCord", bytes.toByteArray());
         p.setDisplayName(displayName);
     }
     public void Change_Display_Name(ProxiedPlayer p, String s) {
