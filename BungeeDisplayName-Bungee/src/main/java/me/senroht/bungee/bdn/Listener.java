@@ -25,22 +25,32 @@ public class Listener implements net.md_5.bungee.api.plugin.Listener {
                 if(main.configuration.getBoolean("Whitelist_On")){
                     if(main.configuration.getStringList("Whitelisted_Servers").contains(p.getServer().getInfo().getName())){
                         main.Load_Player_Config(); //Reload the players
-                        main.Check_Display_Name(p);
+                        main.CheckDisplayNameServer(p);
                     }
                 }
                 else{
                     main.Load_Player_Config(); //Reload the players
-                    main.Check_Display_Name(p);
-                }
-
-                //Tell who and what
-                if (main.playerConfig.get(p.getUniqueId().toString()) != null){
-                    main.getLogger().info("Player (" + p + ") logged in with display name of: " + main.playerConfig.get(p.getUniqueId().toString()));
-                }
-                else{
-                    main.getLogger().info("Player (" + p + ") logged in with no set display name");
+                    main.CheckDisplayNameServer(p);
                 }
             }
         }, 2, TimeUnit.SECONDS);
+        if(main.configuration.getBoolean("Whitelist_On")){
+            if(main.configuration.getStringList("Whitelisted_Servers").contains(p.getServer().getInfo().getName())){
+                main.Load_Player_Config(); //Reload the players
+                main.Check_Display_Name(p);
+            }
+        }
+        else{
+            main.Load_Player_Config(); //Reload the players
+            main.Check_Display_Name(p);
+        }
+
+        //Tell who and what
+        if (main.playerConfig.get(p.getUniqueId().toString()) != null){
+            main.getLogger().info("Player (" + p + ") logged in with display name of: " + main.playerConfig.get(p.getUniqueId().toString()));
+        }
+        else{
+            main.getLogger().info("Player (" + p + ") logged in with no set display name");
+        }
     }
 }

@@ -137,7 +137,46 @@ public class Main extends Plugin
         }
 
     }
+    public void CheckDisplayNameServer(ProxiedPlayer p){
+        Load_Player_Config(); //Load
+        if(!p.getName().equalsIgnoreCase(p.getDisplayName())){
+            if(playerConfig.get(p.getUniqueId().toString()) == null){
+                playerConfig.set(p.getUniqueId().toString(), p.getDisplayName());
+                Save_Player_Config(); //Re
+                Load_Player_Config(); //Load
+            }
+            SetDisplayNameServer(p);
+        }
+        else{
+            Save_Player_Config();
+            Load_Player_Config();
+            SetDisplayNameServer(p);
+        }
+
+    }
     public void Set_Display_Name(ProxiedPlayer p){
+        String displayName = null;
+        if (playerConfig.getString(p.getUniqueId().toString()) == ""){
+            displayName = p.getName();
+        }
+        else{
+            displayName = playerConfig.getString(p.getUniqueId().toString(), ", ");
+        }
+        if(configuration.getBoolean("Use_Colors")){
+            displayName = ChatColor.translateAlternateColorCodes('&', displayName) + ChatColor.RESET;
+        }
+        if(configuration.getBoolean("Use_Prefix")){
+            if(!p.getName().equalsIgnoreCase(displayName)){
+                String prefix = configuration.getString("Prefix");
+                prefix = ChatColor.translateAlternateColorCodes('&', prefix);
+                //Add prefix + Reset the color + Add display name + Reset the color.
+                displayName = prefix + ChatColor.RESET + displayName + ChatColor.RESET;
+            }
+        }
+        p.setDisplayName(displayName);
+    }
+
+    public void SetDisplayNameServer(ProxiedPlayer p){
         String displayName = null;
         if (playerConfig.getString(p.getUniqueId().toString()) == ""){
             displayName = p.getName();
@@ -168,7 +207,6 @@ public class Main extends Plugin
             e.printStackTrace();
         }
         server.sendData("BungeeCord", bytes.toByteArray());
-        p.setDisplayName(displayName);
     }
     public void Change_Display_Name(ProxiedPlayer p, String s) {
         if (configuration.getBoolean("Whitelist_On")) {
@@ -177,6 +215,7 @@ public class Main extends Plugin
                 Save_Player_Config(); //Re
                 Load_Player_Config(); //Load
                 Set_Display_Name(p);
+                SetDisplayNameServer(p);
             }
         }
         else {
@@ -184,6 +223,7 @@ public class Main extends Plugin
             Save_Player_Config(); //Re
             Load_Player_Config(); //Load
             Set_Display_Name(p);
+            SetDisplayNameServer(p);
         }
     }
 }

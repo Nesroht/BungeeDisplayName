@@ -21,7 +21,7 @@ public class PluginChannelListener implements PluginMessageListener {
             String str2 = string.split(", ")[1];
             Player pl = Bukkit.getPlayer(str1);
             pl.setDisplayName(str2);
-            //pl.sendMessage("Set your nickname to " + str2);
+            //pl.sendMessage("Set your nickname to " + pl.getDisplayName());
         }
     }
 
