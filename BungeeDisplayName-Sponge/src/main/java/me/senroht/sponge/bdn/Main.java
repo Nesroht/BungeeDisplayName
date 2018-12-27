@@ -47,7 +47,13 @@ public class Main {
         Sponge.getCommandManager().register(this, CommandSpec.builder()
                 .description(Text.of("Prefix for admin commands"))
                 .permission("bdn.admin")
-                .arguments(GenericArguments.requiringPermission(GenericArguments.string(Text.of("reload")), "bdn.admin.reload"))
+                .arguments(
+                        GenericArguments.requiringPermission(GenericArguments.string(Text.of("reload")), "bdn.admin.reload"),
+                        GenericArguments.requiringPermission(GenericArguments.string(Text.of("colors")), "bdn.admin.colors.toggle"),
+                        GenericArguments.requiringPermission(GenericArguments.string(Text.of("spaces")), "bdn.admin.spaces.toggle"),
+                        GenericArguments.requiringPermission(GenericArguments.string(Text.of("length")), "bdn.admin.length.toggle"),
+                        GenericArguments.requiringPermission(GenericArguments.string(Text.of("prefix")), "bdn.admin.prefix.toggle")
+                )
                 .executor(new AdminOptions())
                 .build(), "bdn");
         logger.info("");

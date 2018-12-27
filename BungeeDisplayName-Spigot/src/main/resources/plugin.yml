@@ -19,6 +19,7 @@ commands:
   bdn:
     description: Prefix for admin commands, for example reload.
     usage: /<command>
+    aliases: bungeedisplayname
   realname:
     description: Reveals the real name of a given nickname (ignores colorcodes).
     usage: /<command>

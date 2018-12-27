@@ -13,7 +13,7 @@ public class AdminOptions implements TabCompleter {
 
     @Override
     public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] args) {
-        if(command.getName().equalsIgnoreCase("bdn") && args.length <= 1){
+        if((command.getName().equalsIgnoreCase("bdn") || command.getName().equalsIgnoreCase("bungeedisplayname")) && args.length <= 1){
             List<String> tabComplete = new ArrayList<String>();
             for(String commands : COMMANDS){
                 if (commands.toLowerCase().startsWith(args[0].toLowerCase()) || args[0] == null){
