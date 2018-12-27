@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/GameConfig.java" line="15" mnemonic="2" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a844d5a4-f557-47c7-885a-6ebe68ba8f1c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/GameConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BungeeDisplayName-Sponge/src/main/java/me/senroht/sponge/bdn/BungeeCordRawDataListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BungeeDisplayName-Bungee/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BungeeDisplayName-Bungee/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/AdminOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/AdminOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/ChangeDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/ChangeDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/PluginChannelListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/PluginChannelListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/resources/bungee.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/resources/bungee.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BungeeDisplayName-Master/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BungeeDisplayName-Master/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BungeeDisplayName-Spigot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BungeeDisplayName-Spigot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/AdminOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/AdminOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BungeeDisplayName-Sponge/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BungeeDisplayName-Sponge/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BungeeDisplayName-Sponge/src/main/java/me/senroht/sponge/bdn/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/BungeeDisplayName-Sponge/src/main/java/me/senroht/sponge/bdn/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,57 +37,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="218" column="13" selection-start-line="218" selection-start-column="13" selection-end-line="218" selection-end-column="13" />
+            <state relative-caret-position="221">
+              <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2989#2990#0" expanded="true" />
+                <element signature="e#3029#3030#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/PluginChannelListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="23" column="72" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1017#1018#0" expanded="true" />
-                <element signature="e#1116#1117#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Spigot/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -80,26 +53,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Master/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+            <state relative-caret-position="307">
+              <caret line="52" column="72" selection-start-line="52" selection-start-column="72" selection-end-line="52" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Sponge/pom.xml">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="697">
+              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Sponge/src/main/java/me/senroht/sponge/bdn/Main.java">
+        <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" column="78" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
+            <state relative-caret-position="290">
+              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="31" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/AdminOptions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2091">
+              <caret line="360" column="67" selection-start-line="360" selection-start-column="67" selection-end-line="360" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,13 +90,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/ChangeDisplay.java">
+        <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/GameConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3349">
-              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            <state relative-caret-position="1156">
+              <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#209#233#0" expanded="true" />
+                <element signature="e#234#235#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/resources/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="43" column="62" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/resources/players.yml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/ChangeDisplay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="206" column="29" selection-start-line="206" selection-start-column="29" selection-end-line="206" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,12 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/Listener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-              <folding>
-                <element signature="e#624#1655#0" expanded="true" />
-                <element signature="e#1654#1655#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="527">
+              <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -171,26 +176,33 @@
         <option value="$PROJECT_DIR$/src/main/java/me/senroht/bungee/bdn/Change_Display.java" />
         <option value="$PROJECT_DIR$/BungeeDisplayName-Master/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/BukkitPlugin.java" />
-        <option value="$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/AdminOptions.java" />
         <option value="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me.senroht/bdn/Main.java" />
         <option value="$PROJECT_DIR$/BungeeDisplayName-Sponge/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/BungeeDisplayName-Sponge/src/main/java/me/senroht/sponge/bdn/ChangeDisplay.java" />
         <option value="$PROJECT_DIR$/BungeeDisplayName-Sponge/src/main/java/me/senroht/sponge/bdn/ResetDisplay.java" />
         <option value="$PROJECT_DIR$/BungeeDisplayName-Sponge/src/main/java/me/senroht/sponge/bdn/RealName.java" />
         <option value="$PROJECT_DIR$/BungeeDisplayName-Sponge/src/main/java/me/senroht/sponge/bdn/AdminOptions.java" />
-        <option value="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/resources/bungee.yml" />
-        <option value="$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/PluginMessageListener.java" />
         <option value="$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/Main.java" />
-        <option value="$PROJECT_DIR$/BungeeDisplayName-Bungee/pom.xml" />
-        <option value="$PROJECT_DIR$/BungeeDisplayName-Spigot/pom.xml" />
-        <option value="$PROJECT_DIR$/BungeeDisplayName-Master/pom.xml" />
-        <option value="$PROJECT_DIR$/BungeeDisplayName-Sponge/pom.xml" />
-        <option value="$PROJECT_DIR$/BungeeDisplayName-Sponge/src/main/java/me/senroht/sponge/bdn/Main.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/Listener.java" />
-        <option value="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/Main.java" />
         <option value="$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/PluginChannelListener.java" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Sponge/src/main/java/me/senroht/sponge/bdn/BungeeCordRawDataListener.java" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Sponge/pom.xml" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Spigot/pom.xml" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/resources/bungee.yml" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/resources/plugin.yml" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Sponge/src/main/java/me/senroht/sponge/bdn/Main.java" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/ChangeDisplay.java" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/AdminOptions.java" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/SimpleConfigManager.java" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/SimpleConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Bungee/pom.xml" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/resources/config.yml" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Master/pom.xml" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/Main.java" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/AdminOptions.java" />
+        <option value="$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/GameConfig.java" />
       </list>
     </option>
   </component>
@@ -277,37 +289,18 @@
             <path>
               <item name="BungeeDisplayName" type="b2602c69:ProjectViewProjectNode" />
               <item name="BungeeDisplayName" type="462c0819:PsiDirectoryNode" />
-              <item name="BungeeDisplayName-Spigot" type="462c0819:PsiDirectoryNode" />
+              <item name="BungeeDisplayName-Master" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BungeeDisplayName" type="b2602c69:ProjectViewProjectNode" />
               <item name="BungeeDisplayName" type="462c0819:PsiDirectoryNode" />
-              <item name="BungeeDisplayName-Spigot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="BungeeDisplayName-Master" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BungeeDisplayName" type="b2602c69:ProjectViewProjectNode" />
               <item name="BungeeDisplayName" type="462c0819:PsiDirectoryNode" />
-              <item name="BungeeDisplayName-Spigot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BungeeDisplayName" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BungeeDisplayName" type="462c0819:PsiDirectoryNode" />
-              <item name="BungeeDisplayName-Spigot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BungeeDisplayName" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BungeeDisplayName" type="462c0819:PsiDirectoryNode" />
-              <item name="BungeeDisplayName-Spigot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bdn" type="462c0819:PsiDirectoryNode" />
+              <item name="BungeeDisplayName-Sponge" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -317,23 +310,24 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545349180540" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545947934693" />
+    <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/org/spongepowered/spongeapi/7.1.0/spongeapi-7.1.0-javadoc.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="me.senroht.sponge.bdn" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Senroht\Desktop\BungeeDisplayName\BungeeDisplayName-Bungee\src\main\java\me.senroht" />
       <recent name="C:\Users\Senroht\Desktop\BungeeDisplayName\BungeeDisplayName-Bungee\src\main\resources" />
       <recent name="C:\Users\Senroht\Desktop\BungeeDisplayName\BungeeDisplayName-Bungee\src\main\java" />
       <recent name="C:\Users\Senroht\Desktop\BungeeDisplayName\BungeeDisplayName-Bungee\src" />
       <recent name="C:\Users\Senroht\Desktop\BungeeDisplayName\src\main\resources" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="me.senroht.sponge.bdn" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -363,8 +357,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20574887" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20877458" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -385,7 +380,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info active="true" anchor="right" id="Maven" order="4" visible="true" weight="0.14599092" />
+      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.14599092" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -420,9 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/resources/players.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/net/md-5/bungeecord-api/1.12-SNAPSHOT/bungeecord-api-1.12-20180712.114619-97.jar!/net/md_5/bungee/api/connection/ProxiedPlayer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -430,43 +422,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/resources/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/senroht/spigot/bdn/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/senroht/spigot/bdn/Main.java" />
     <entry file="file://$PROJECT_DIR$/BungeeDisplayName.iml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/ResetDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="54" column="66" selection-start-line="54" selection-start-column="66" selection-end-line="54" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/BungeeDisplayName-Bungee.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Master/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Master/src/main/java/Main.java" />
     <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Spigot/BungeeDisplayName-Spigot.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -481,26 +444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/RealName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/AdminOptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -573,6 +516,54 @@
         <state relative-caret-position="-285" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/RealName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1060">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/spongepowered/spongeapi/7.1.0/spongeapi-7.1.0.jar!/org/spongepowered/api/entity/living/player/Player.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="92" column="28" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/ResetDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="54" column="66" selection-start-line="54" selection-start-column="66" selection-end-line="54" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Sponge/src/main/java/me/senroht/sponge/bdn/BungeeCordRawDataListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Sponge/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/resources/bungee.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -587,10 +578,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Sponge/src/main/java/me/senroht/sponge/bdn/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="78" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/PluginChannelListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/AdminOptions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="93">
+          <caret line="11" column="96" selection-start-line="11" selection-start-column="96" selection-end-line="11" selection-end-column="96" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#566#574#0" expanded="true" />
@@ -598,34 +619,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/pom.xml">
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/SimpleConfigManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Sponge/src/main/java/me/senroht/sponge/bdn/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="78" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
+        <state relative-caret-position="561">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+            <element signature="e#1423#1424#0" expanded="true" />
+            <element signature="e#1479#1480#0" expanded="true" />
+            <element signature="e#3003#3004#0" expanded="true" />
+            <element signature="e#3051#3052#0" expanded="true" />
+            <element signature="e#6985#6986#0" expanded="true" />
+            <element signature="e#7059#7060#0" expanded="true" />
+            <element signature="e#9622#9623#0" expanded="true" />
+            <element signature="e#9678#9679#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/SimpleConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Sponge/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="348">
+          <caret line="130" column="40" lean-forward="true" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#977#978#0" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1071#1072#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1182#1183#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#1267#1268#0" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
+            <element signature="e#1366#1367#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1463#1464#0" expanded="true" />
+            <element signature="e#1522#1523#0" expanded="true" />
+            <element signature="e#1578#1579#0" expanded="true" />
+            <element signature="e#1624#1625#0" expanded="true" />
+            <element signature="e#1671#1672#0" expanded="true" />
+            <element signature="e#1851#1852#0" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="e#1957#1958#0" expanded="true" />
+            <element signature="e#2012#2013#0" expanded="true" />
+            <element signature="e#2055#2056#0" expanded="true" />
+            <element signature="e#2103#2104#0" expanded="true" />
+            <element signature="e#2159#2160#0" expanded="true" />
+            <element signature="e#2212#2213#0" expanded="true" />
+            <element signature="e#2256#2257#0" expanded="true" />
+            <element signature="e#2305#2306#0" expanded="true" />
+            <element signature="e#2347#2348#0" expanded="true" />
+            <element signature="e#2390#2391#0" expanded="true" />
+            <element signature="e#2440#2441#0" expanded="true" />
+            <element signature="e#2484#2485#0" expanded="true" />
+            <element signature="e#3317#3318#0" expanded="true" />
+            <element signature="e#3414#3415#0" expanded="true" />
+            <element signature="e#3588#3589#0" expanded="true" />
+            <element signature="e#3637#3638#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -636,63 +692,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Master/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/resources/players.yml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/Listener.java">
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/resources/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-          <folding>
-            <element signature="e#624#1655#0" expanded="true" />
-            <element signature="e#1654#1655#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="43" column="62" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/ChangeDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3349">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        <state relative-caret-position="87">
+          <caret line="206" column="29" selection-start-line="206" selection-start-column="29" selection-end-line="206" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#209#233#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/Listener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Master/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="52" column="72" selection-start-line="52" selection-start-column="72" selection-end-line="52" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="218" column="13" selection-start-line="218" selection-start-column="13" selection-end-line="218" selection-end-column="13" />
+        <state relative-caret-position="221">
+          <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2989#2990#0" expanded="true" />
+            <element signature="e#3029#3030#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/Main.java">
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/GameConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        <state relative-caret-position="1156">
+          <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#234#235#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Spigot/src/main/java/me/senroht/spigot/bdn/PluginChannelListener.java">
+    <entry file="file://$PROJECT_DIR$/BungeeDisplayName-Bungee/src/main/java/me/senroht/bungee/bdn/AdminOptions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="23" column="72" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
+        <state relative-caret-position="2091">
+          <caret line="360" column="67" selection-start-line="360" selection-start-column="67" selection-end-line="360" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1017#1018#0" expanded="true" />
-            <element signature="e#1116#1117#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -754,7 +831,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

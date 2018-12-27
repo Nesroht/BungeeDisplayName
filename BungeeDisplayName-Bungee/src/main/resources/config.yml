@@ -13,14 +13,9 @@ Plugin_Tag: '&f&l[&9BDN&f&l]&r '
 # Permissions.
 #
 #Need permissions: will use a permissions plugin, if you do not have a permission plugin please set this to false.
+#Permission nodes are found on the spigot page.
 Need_Permissions: true
-#
-# bdn.nickname | The /nickname command.
-# bdn.nickname.other | change other player's nickname
-# bdn.realname | The /realName command.
-# bdn.resetname | The /resetname command.
-# bdn.resetname.other | reset other players nickname
-# bdn.color | Allows color for the player.
+
 
 #
 # Whitelist Servers.

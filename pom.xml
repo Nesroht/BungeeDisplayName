@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>me.senroht.bdn</groupId>
     <artifactId>BungeeDisplayName</artifactId>
-    <version>1.2.1</version>
+    <version>1.2.2</version>
     <packaging>pom</packaging>
     <name>BungeeDisplayName</name>
     <properties>
@@ -35,6 +35,10 @@
         <repository>
             <id>sponge</id>
             <url>https://repo.spongepowered.org/maven</url>
+        </repository>
+        <repository>
+            <id>de.exlll</id>
+            <url>http://exlll.de:8081/artifactory/releases/</url>
         </repository>
     </repositories>
     <modules>

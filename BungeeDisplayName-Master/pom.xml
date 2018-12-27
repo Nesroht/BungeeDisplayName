@@ -4,24 +4,29 @@
     <parent>
         <groupId>me.senroht.bdn</groupId>
         <artifactId>BungeeDisplayName</artifactId>
-        <version>1.2.1</version>
+        <version>1.2.2</version>
     </parent>
     <artifactId>BungeeDisplayName-Master</artifactId>
     <dependencies>
         <dependency>
             <groupId>me.senroht.bdn</groupId>
             <artifactId>BungeeDisplayName-Spigot</artifactId>
-            <version>1.2.1</version>
+            <version>1.2.2</version>
         </dependency>
         <dependency>
             <groupId>me.senroht.bdn</groupId>
             <artifactId>BungeeDisplayName-Bungee</artifactId>
-            <version>1.2.1</version>
+            <version>1.2.2</version>
         </dependency>
         <dependency>
             <groupId>me.senroht.bdn</groupId>
             <artifactId>BungeeDisplayName-Sponge</artifactId>
-            <version>1.2.1</version>
+            <version>1.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>de.exlll</groupId>
+            <artifactId>configlib-bungee</artifactId>
+            <version>2.2.0</version>
         </dependency>
     </dependencies>
     <build>
@@ -45,6 +50,7 @@
                             <include>me.senroht.bdn:BungeeDisplayName-Bungee</include>
                             <include>me.senroht.bdn:BungeeDisplayName-Spigot</include>
                             <include>me.senroht.bdn:BungeeDisplayName-Sponge</include>
+                            <include>de.exlll:configlib-bungee</include>
                         </includes>
                     </artifactSet>
                 </configuration>

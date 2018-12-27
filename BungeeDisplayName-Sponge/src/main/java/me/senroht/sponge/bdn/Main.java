@@ -2,18 +2,24 @@ package me.senroht.sponge.bdn;
 
 import com.google.inject.Inject;
 import org.slf4j.Logger;
+import org.spongepowered.api.Platform;
 import org.spongepowered.api.Sponge;
 import org.spongepowered.api.command.args.GenericArguments;
 import org.spongepowered.api.command.spec.CommandSpec;
 import org.spongepowered.api.event.Listener;
 import org.spongepowered.api.event.game.state.GameStartedServerEvent;
+import org.spongepowered.api.event.game.state.GameStoppedServerEvent;
+import org.spongepowered.api.network.ChannelBinding;
+import org.spongepowered.api.network.ChannelRegistrar;
 import org.spongepowered.api.plugin.Plugin;
 import org.spongepowered.api.text.Text;
-import org.spongepowered.api.command.CommandManager;
 
 
-@Plugin(id = "bungeedisplayname", name = "BungeeDisplayName", version = "1.2.1", description = "Plugin to set nickname over Bungeecord")
+@Plugin(id = "bungeedisplayname", name = "BungeeDisplayName", version = "1.2.2", description = "Plugin to set nickname over Bungeecord")
 public class Main {
+
+    ChannelRegistrar channelRegistrar;
+    ChannelBinding.RawDataChannel channel;
 
     @Inject
     private Logger logger;
@@ -58,6 +64,14 @@ public class Main {
         logger.info(" |_|\\_\\__,_|_|_|_\\___|");
         logger.info("");
         logger.info("BungeeDisplayName has successfully loaded");
-    }
 
+        channelRegistrar = Sponge.getGame().getChannelRegistrar();
+        ChannelBinding.RawDataChannel channel = Sponge.getGame().getChannelRegistrar().createRawChannel(this, "BungeeCord");
+        channel.addListener(Platform.Type.SERVER, new BungeeCordRawDataListener(channel));
+        this.channel = channel;
+    }
+    @Listener
+    public void onServerStop(GameStoppedServerEvent event) {
+        Sponge.getChannelRegistrar().unbindChannel(channel);
+    }
 }

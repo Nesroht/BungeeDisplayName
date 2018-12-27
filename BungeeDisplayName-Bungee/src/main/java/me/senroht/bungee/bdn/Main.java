@@ -6,19 +6,23 @@ import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.config.ServerInfo;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Plugin;
+import de.exlll.configlib.configs.yaml.YamlConfiguration.YamlProperties;
 import net.md_5.bungee.config.Configuration;
 import net.md_5.bungee.config.ConfigurationProvider;
 import net.md_5.bungee.config.YamlConfiguration;
 
 import java.io.*;
 import java.nio.file.Files;
+import java.nio.file.Path;
 
 @SuppressWarnings("ALL")
 public class Main extends Plugin
 {
     //Global Variables
-    public Configuration configuration = null;
-    public Configuration playerConfig = null;
+    public Path configPath;
+    public YamlProperties properties;
+    public GameConfig configuration;
+    public Configuration playerConfig;
     public String pluginTag = null;
 
     //Start Plugin
@@ -45,6 +49,12 @@ public class Main extends Plugin
         getProxy().getPluginManager().registerCommand(this, new AdminOptions(this));
         getProxy().getPluginManager().registerListener(this, new Listener(this));
 
+        configPath = new File(getDataFolder(), "config.yml").toPath();
+        properties = YamlProperties.builder().build();
+        configuration = new GameConfig(configPath, properties);
+
+        configuration.loadAndSave();
+
         Load_Config();
         Load_Player_Config();
     }
@@ -66,25 +76,12 @@ public class Main extends Plugin
         }
     }
     public void Load_Config(){
-        try {
-            configuration = ConfigurationProvider.getProvider(YamlConfiguration.class).load(new File(getDataFolder(), "config.yml"));
-            pluginTag = configuration.getString("Plugin_Tag"); //get tag
-            pluginTag = ChatColor.translateAlternateColorCodes('&', pluginTag); //apply color
-
-        }
-        catch (IOException e) {
-            getLogger().severe("Error: Could not load the config, creating a new one.");
-            Test_For_Config();
-        }
+        configuration.load();
+        pluginTag = configuration.getString("Plugin_Tag"); //get tag
+        pluginTag = ChatColor.translateAlternateColorCodes('&', pluginTag); //apply color
     }
     public void Save_Config(){
-        try {
-            ConfigurationProvider.getProvider(YamlConfiguration.class).save(configuration, new File(getDataFolder(), "config.yml"));
-        }
-        catch (IOException e) {
-            getLogger().severe("Error: Could not save the config, creating a new one.");
-            Test_For_Config();
-        }
+        configuration.save();
     }
     public void Create_Player_Config(){
         File file = new File(getDataFolder(), "players.yml");

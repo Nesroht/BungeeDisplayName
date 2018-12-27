@@ -51,26 +51,32 @@ public class ChangeDisplay extends Command
                 if(commandSender instanceof ProxiedPlayer){
                     ProxiedPlayer player = (ProxiedPlayer) commandSender;
                     if(strings[0].contains("&")){
-                        if(commandSender.hasPermission("bdn.nickname.color")){
-                            if(main.configuration.getBoolean("Length_Limit")) {
-                                String colorStrip = ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', strings[0]));
-                                if (colorStrip.length() <= main.configuration.getInt("Length")) {
+                        if (main.configuration.getBoolean("Use_Colors")){
+                            if(commandSender.hasPermission("bdn.nickname.color")){
+                                if(main.configuration.getBoolean("Length_Limit")) {
+                                    String colorStrip = ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', strings[0]));
+                                    if (colorStrip.length() <= main.configuration.getInt("Length")) {
+                                        main.Change_Display_Name(player, strings[0]);
+                                        player.sendMessage(main.pluginTag + "Changed your display name to: " + player.getDisplayName());
+                                    }
+                                    else{
+                                        commandSender.sendMessage(main.pluginTag + "The new name is: " + strings[0].length());
+                                        commandSender.sendMessage(main.pluginTag + "But it must be under or equal to: " + main.configuration.getInt("Length"));
+                                    }
+                                }
+                                else{
                                     main.Change_Display_Name(player, strings[0]);
                                     player.sendMessage(main.pluginTag + "Changed your display name to: " + player.getDisplayName());
                                 }
-                                else{
-                                    commandSender.sendMessage("The new name is: " + strings[0].length());
-                                    commandSender.sendMessage("But it must be under or equal to: " + main.configuration.getInt("Length"));
-                                }
                             }
                             else{
-                                main.Change_Display_Name(player, strings[0]);
-                                player.sendMessage(main.pluginTag + "Changed your display name to: " + player.getDisplayName());
+                                commandSender.sendMessage(main.pluginTag + "You cant use color codes in your nickname!");
                             }
                         }
                         else{
-                            commandSender.sendMessage(main.pluginTag + "You cant use color codes in your nickname!");
+                            commandSender.sendMessage(main.pluginTag + "Color codes are dissabled!");
                         }
+
                     }
                     else{
                         if(main.configuration.getBoolean("Length_Limit")) {
@@ -79,8 +85,8 @@ public class ChangeDisplay extends Command
                                 player.sendMessage(main.pluginTag + "Changed your display name to: " + player.getDisplayName());
                             }
                             else{
-                                commandSender.sendMessage("The new name is: " + strings[0].length());
-                                commandSender.sendMessage("But it must be under or equal to: " + main.configuration.getInt("Length"));
+                                commandSender.sendMessage(main.pluginTag + "The new name is: " + strings[0].length());
+                                commandSender.sendMessage(main.pluginTag + "But it must be under or equal to: " + main.configuration.getInt("Length"));
                             }
                         }
                         else{
@@ -93,7 +99,8 @@ public class ChangeDisplay extends Command
                 else{
                     commandSender.sendMessage(main.pluginTag + "Only a player can do this.");
                 }
-            }else if(strings.length == 2) {
+            }
+            if(strings.length == 2) {
                 ProxiedPlayer sp = null;
                 if (!commandSender.hasPermission("bdn.nickname.other")){
                     if (strings[0] != commandSender.getName()){
@@ -109,27 +116,32 @@ public class ChangeDisplay extends Command
                     }
                     if (sp != null) {
                         if(strings[1].contains("&")) {
-                            if (commandSender.hasPermission("bdn.nickname.color")) {
-                                if (main.configuration.getBoolean("Length_Limit")) {
-                                    String colorStrip = ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', strings[1]));
-                                    if (colorStrip.length() <= main.configuration.getInt("Length")) {
+                            if(main.configuration.getBoolean("Use_Colors")){
+                                if (commandSender.hasPermission("bdn.nickname.color")) {
+                                    if (main.configuration.getBoolean("Length_Limit")) {
+                                        String colorStrip = ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', strings[1]));
+                                        if (colorStrip.length() <= main.configuration.getInt("Length")) {
+                                            main.Change_Display_Name(sp, strings[1]);
+                                            commandSender.sendMessage(main.pluginTag + "You changed " + sp.getName() + "'s name to: " + sp.getDisplayName());
+                                            sp.sendMessage(main.pluginTag + commandSender.getName() + " changed your name to: " + sp.getDisplayName());
+                                        }
+                                        else {
+                                            commandSender.sendMessage(main.pluginTag + "The new name is: " + colorStrip.length());
+                                            commandSender.sendMessage(main.pluginTag + "But it must be under or equal to: " + main.configuration.getInt("Length"));
+                                        }
+                                    }
+                                    else{
                                         main.Change_Display_Name(sp, strings[1]);
                                         commandSender.sendMessage(main.pluginTag + "You changed " + sp.getName() + "'s name to: " + sp.getDisplayName());
                                         sp.sendMessage(main.pluginTag + commandSender.getName() + " changed your name to: " + sp.getDisplayName());
                                     }
-                                    else {
-                                        commandSender.sendMessage("The new name is: " + colorStrip.length());
-                                        commandSender.sendMessage("But it must be under or equal to: " + main.configuration.getInt("Length"));
-                                    }
                                 }
                                 else{
-                                    main.Change_Display_Name(sp, strings[1]);
-                                    commandSender.sendMessage(main.pluginTag + "You changed " + sp.getName() + "'s name to: " + sp.getDisplayName());
-                                    sp.sendMessage(main.pluginTag + commandSender.getName() + " changed your name to: " + sp.getDisplayName());
+                                    commandSender.sendMessage(main.pluginTag + "You cant use color codes in nicknames!");
                                 }
                             }
                             else{
-                                commandSender.sendMessage(main.pluginTag + "You cant use color codes in nicknames!");
+                                commandSender.sendMessage(main.pluginTag + "Color codes are dissabled!");
                             }
                         }
                         else {
@@ -176,40 +188,16 @@ public class ChangeDisplay extends Command
                             newName += strings[i] + " ";
                         }
                         newName = newName.trim();
-                        if(!commandSender.hasPermission("bdn.nickname.color")){
-                            if(newName.contains("&")){
-                                commandSender.sendMessage(main.pluginTag + "You cant use color codes in nicknames");
-                            }
-                            else{
-                                if(main.configuration.getBoolean("Length_Limit")){
-                                    if( newName.length() <= main.configuration.getInt("Length")){
-                                        main.Change_Display_Name(sp, newName);
-                                        commandSender.sendMessage(main.pluginTag + "You changed " + sp.getName() + "'s name to: " + sp.getDisplayName());
-                                        sp.sendMessage(main.pluginTag + "Your name was changed to: " + sp.getDisplayName());
-                                    }
-                                    else{
-                                        commandSender.sendMessage("The new name is: " + newName.length());
-                                        commandSender.sendMessage("But it must be under or equal to: " + main.configuration.getInt("Length"));
-                                    }
-                                }
-                                else{
-                                    main.Change_Display_Name(sp, newName);
-                                    commandSender.sendMessage(main.pluginTag + "You changed " + sp.getName() + ChatColor.RESET + "'s name to: " + sp.getDisplayName());
-                                    sp.sendMessage(main.pluginTag + "Your name was changed to: " + sp.getDisplayName());
-                                }
-                            }
-                        }
-                        else{
+                        if(!newName.contains("&")){
                             if(main.configuration.getBoolean("Length_Limit")){
-                                String colorStrip = ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', newName));
-                                if( colorStrip.length() <= main.configuration.getInt("Length")){
+                                if( newName.length() <= main.configuration.getInt("Length")){
                                     main.Change_Display_Name(sp, newName);
-                                    commandSender.sendMessage(main.pluginTag + "You changed " + sp.getName() + ChatColor.RESET + "'s name to: " + sp.getDisplayName());
+                                    commandSender.sendMessage(main.pluginTag + "You changed " + sp.getName() + "'s name to: " + sp.getDisplayName());
                                     sp.sendMessage(main.pluginTag + "Your name was changed to: " + sp.getDisplayName());
                                 }
                                 else{
-                                    commandSender.sendMessage("The new name is: " + colorStrip.length());
-                                    commandSender.sendMessage("But it must be under or equal to: " + main.configuration.getInt("Length"));
+                                    commandSender.sendMessage(main.pluginTag + "The new name is: " + newName.length());
+                                    commandSender.sendMessage(main.pluginTag + "But it must be under or equal to: " + main.configuration.getInt("Length"));
                                 }
                             }
                             else{
@@ -217,6 +205,36 @@ public class ChangeDisplay extends Command
                                 commandSender.sendMessage(main.pluginTag + "You changed " + sp.getName() + ChatColor.RESET + "'s name to: " + sp.getDisplayName());
                                 sp.sendMessage(main.pluginTag + "Your name was changed to: " + sp.getDisplayName());
                             }
+                        }
+                        else {
+                            if (!commandSender.hasPermission("bdn.nickname.color")) {
+                                commandSender.sendMessage(main.pluginTag + "You cant use color codes in your nick!");
+                            }
+                            else{
+                                if(main.configuration.getBoolean("Use_Colors")){
+                                    if(main.configuration.getBoolean("Length_Limit")){
+                                        String colorStrip = ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', newName));
+                                        if( colorStrip.length() <= main.configuration.getInt("Length")){
+                                            main.Change_Display_Name(sp, newName);
+                                            commandSender.sendMessage(main.pluginTag + "You changed " + sp.getName() + ChatColor.RESET + "'s name to: " + sp.getDisplayName());
+                                            sp.sendMessage(main.pluginTag + "Your name was changed to: " + sp.getDisplayName());
+                                        }
+                                        else{
+                                            commandSender.sendMessage(main.pluginTag + "The new name is: " + colorStrip.length());
+                                            commandSender.sendMessage(main.pluginTag + "But it must be under or equal to: " + main.configuration.getInt("Length"));
+                                        }
+                                    }
+                                    else{
+                                        main.Change_Display_Name(sp, newName);
+                                        commandSender.sendMessage(main.pluginTag + "You changed " + sp.getName() + ChatColor.RESET + "'s name to: " + sp.getDisplayName());
+                                        sp.sendMessage(main.pluginTag + "Your name was changed to: " + sp.getDisplayName());
+                                    }
+                                }
+                                else{
+                                    commandSender.sendMessage(main.pluginTag + "Color codes are disabled!");
+                                }
+                            }
+
                         }
                     }
                     else{
@@ -233,41 +251,48 @@ public class ChangeDisplay extends Command
                         newName += strings[i] + " ";
                     }
                     newName = newName.trim();
-                    if (!commandSender.hasPermission("bdn.nickname.color")) {
-                        if (newName.contains("&")) {
-                            commandSender.sendMessage(main.pluginTag + "You cant use color codes in your nick!");
-                        }
-                        else {
-                            if (main.configuration.getBoolean("Length_Limit")) {
-                                if (newName.length() <= main.configuration.getInt("Length")) {
-                                    main.Change_Display_Name(pp, newName);
-                                    pp.sendMessage(main.pluginTag + "Changed your display name to: " + pp.getDisplayName());
-                                } else {
-                                    commandSender.sendMessage("The new name is: " + newName.length());
-                                    commandSender.sendMessage("But it must be under or equal to: " + main.configuration.getInt("Length"));
-                                }
-                            } else {
-                                main.Change_Display_Name(pp, newName);
-                                pp.sendMessage(main.pluginTag + "Changed your display name to: " + pp.getDisplayName());
-                            }
-                        }
-                    }
-                    else {
+                    if (!newName.contains("&")) {
                         if (main.configuration.getBoolean("Length_Limit")) {
-                            String colorStrip = ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', newName));
-                            if (colorStrip.length() <= main.configuration.getInt("Length")) {
+                            if (newName.length() <= main.configuration.getInt("Length")) {
                                 main.Change_Display_Name(pp, newName);
                                 pp.sendMessage(main.pluginTag + "Changed your display name to: " + pp.getDisplayName());
+                            } else {
+                                commandSender.sendMessage(main.pluginTag + "The new name is: " + newName.length());
+                                commandSender.sendMessage(main.pluginTag + "But it must be under or equal to: " + main.configuration.getInt("Length"));
                             }
-                            else {
-                                commandSender.sendMessage("The new name is: " + colorStrip.length());
-                                commandSender.sendMessage("But it must be under or equal to: " + main.configuration.getInt("Length"));
-                            }
-                        }
-                        else {
+                        } else {
                             main.Change_Display_Name(pp, newName);
                             pp.sendMessage(main.pluginTag + "Changed your display name to: " + pp.getDisplayName());
                         }
+                    }
+                    else {
+                        if (!commandSender.hasPermission("bdn.nickname.color")) {
+                            commandSender.sendMessage(main.pluginTag + "You cant use color codes in your nick!");
+                        }
+                        else{
+                            if(main.configuration.getBoolean("Use_Colors")){
+                                if (main.configuration.getBoolean("Length_Limit")) {
+                                    String colorStrip = ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', newName));
+                                    if (colorStrip.length() <= main.configuration.getInt("Length")) {
+                                        main.Change_Display_Name(pp, newName);
+                                        pp.sendMessage(main.pluginTag + "Changed your display name to: " + pp.getDisplayName());
+                                    }
+                                    else {
+                                        commandSender.sendMessage(main.pluginTag + "The new name is: " + colorStrip.length());
+                                        commandSender.sendMessage(main.pluginTag + "But it must be under or equal to: " + main.configuration.getInt("Length"));
+                                    }
+                                }
+                                else {
+                                    main.Change_Display_Name(pp, newName);
+                                    pp.sendMessage(main.pluginTag + "Changed your display name to: " + pp.getDisplayName());
+                                }
+                            }
+                            else{
+                                commandSender.sendMessage(main.pluginTag + "Color codes are disabled!");
+                            }
+                        }
+
+
                     }
                 }
                 else{
