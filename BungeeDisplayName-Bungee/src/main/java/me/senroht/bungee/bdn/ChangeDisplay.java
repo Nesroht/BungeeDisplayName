@@ -100,7 +100,7 @@ public class ChangeDisplay extends Command
                     commandSender.sendMessage(main.pluginTag + "Only a player can do this.");
                 }
             }
-            if(strings.length == 2) {
+            else if(strings.length == 2) {
                 ProxiedPlayer sp = null;
                 if (!commandSender.hasPermission("bdn.nickname.other")){
                     if (strings[0] != commandSender.getName()){

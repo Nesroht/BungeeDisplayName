@@ -12,6 +12,7 @@ import org.spongepowered.api.event.game.state.GameStartedServerEvent;
 import org.spongepowered.api.event.game.state.GameStoppedServerEvent;
 import org.spongepowered.api.network.ChannelBinding;
 import org.spongepowered.api.network.ChannelRegistrar;
+import org.spongepowered.api.plugin.Dependency;
 import org.spongepowered.api.plugin.Plugin;
 import org.spongepowered.api.text.Text;
 
@@ -22,7 +23,7 @@ import java.util.List;
 import static org.spongepowered.api.command.args.GenericArguments.*;
 
 
-@Plugin(id = "bungeedisplayname", name = "BungeeDisplayName", version = "1.2.2", description = "Plugin to set nickname over Bungeecord")
+@Plugin(id = "bungeedisplayname", name = "BungeeDisplayName", version = "1.2.2", description = "Plugin to set nickname over Bungeecord", dependencies=@Dependency(id="nucleus", optional=true))
 public class Main {
 
     ChannelRegistrar channelRegistrar;
@@ -31,6 +32,7 @@ public class Main {
 
     @Inject
     private Logger logger;
+
 
     @Listener
     public void onServerStart(GameStartedServerEvent event) {
@@ -103,6 +105,9 @@ public class Main {
                 .executor(new AdminOptions())
                 .build(), "bdn", "bungeedisplayname");
         logger.info("[BungeeDisplayName] Successfully loaded!");
+        if(!Sponge.getGame().getPluginManager().getPlugin("nucleus").isPresent()){
+            logger.info("[BungeeDisplayName] No compatible nickname plugins, won't set nickname server side!");
+        }
 
         channelRegistrar = Sponge.getGame().getChannelRegistrar();
         ChannelBinding.RawDataChannel channel = Sponge.getGame().getChannelRegistrar().createRawChannel(this, "BungeeCord");

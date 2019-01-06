@@ -36,6 +36,11 @@
             <version>7.1.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>io.github.nucleuspowered</groupId>
+            <artifactId>nucleus-api</artifactId>
+            <version>1.8.1-S7.1</version>
+        </dependency>
     </dependencies>
 
 </project>

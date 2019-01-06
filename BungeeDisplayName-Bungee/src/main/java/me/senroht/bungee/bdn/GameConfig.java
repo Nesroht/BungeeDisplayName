@@ -46,6 +46,9 @@ public class GameConfig extends YamlConfiguration {
     @Comment({"Allow_Spaces: will allow more then one word in display names."})
     private Boolean Allow_Spaces = true;
 
+    //@Comment({"", " ", " 1.7 Support.", " ", "Change the length check to support 1.7", "1.7 does not support names longer than 16 characters, color codes included"})
+    //private Boolean Retro_Support = true;
+
     public String getString(String str){
         switch(str){
             case "Plugin_Tag":

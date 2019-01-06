@@ -145,6 +145,8 @@ public class Main extends Plugin
         String displayName = null;
         if (playerConfig.getString(p.getUniqueId().toString()) == ""){
             displayName = p.getName();
+            p.setDisplayName(displayName);
+            return;
         }
         else{
             displayName = playerConfig.getString(p.getUniqueId().toString(), ", ");
