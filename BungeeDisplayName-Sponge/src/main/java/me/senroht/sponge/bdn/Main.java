@@ -23,7 +23,7 @@ import java.util.List;
 import static org.spongepowered.api.command.args.GenericArguments.*;
 
 
-@Plugin(id = "bungeedisplayname", name = "BungeeDisplayName", version = "1.2.2", description = "Plugin to set nickname over Bungeecord", dependencies=@Dependency(id="nucleus", optional=true))
+@Plugin(id = "bungeedisplayname", name = "BungeeDisplayName", version = "1.2.3", description = "Plugin to set nickname over Bungeecord", dependencies=@Dependency(id="nucleus", optional=true))
 public class Main {
 
     ChannelRegistrar channelRegistrar;
