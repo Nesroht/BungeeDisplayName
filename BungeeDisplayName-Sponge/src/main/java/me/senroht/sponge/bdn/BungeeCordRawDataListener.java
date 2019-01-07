@@ -46,13 +46,19 @@ public class BungeeCordRawDataListener implements RawDataListener {
                     public void run() {
                         try {
                             if(NucleusAPI.getNicknameService().isPresent()){
-                                if(!NucleusAPI.getNicknameService().get().getNickname(Sponge.getServer().getPlayer(str1).get()).get().toPlain().equals(str2)){
+                                if(NucleusAPI.getNicknameService().get().getNickname(Sponge.getServer().getPlayer(str1).get()).isPresent()){
+                                    if(!NucleusAPI.getNicknameService().get().getNickname(Sponge.getServer().getPlayer(str1).get()).get().toPlain().equals(str2)){
+                                        NucleusAPI.getNicknameService().get().setNickname(Sponge.getServer().getPlayer(str1).get(), Text.of(str2), true);
+                                    }
+                                }
+                                else{
                                     NucleusAPI.getNicknameService().get().setNickname(Sponge.getServer().getPlayer(str1).get(), Text.of(str2), true);
                                 }
+
                             }
-                            else{
-                                //Sponge.getServer().getPlayer(str1).get().sendMessage(Text.of("No workings, No nickname service"));
-                            }
+                            /*else{
+                                Sponge.getServer().getPlayer(str1).get().sendMessage(Text.of("No workings, No nickname service"));
+                            }*/
 
                         } catch (NicknameException e) {
                             e.printStackTrace();

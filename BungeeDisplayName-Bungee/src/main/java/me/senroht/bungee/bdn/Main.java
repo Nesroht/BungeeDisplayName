@@ -14,6 +14,7 @@ import net.md_5.bungee.config.YamlConfiguration;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.concurrent.TimeUnit;
 
 @SuppressWarnings("ALL")
 public class Main extends Plugin
@@ -165,7 +166,7 @@ public class Main extends Plugin
         p.setDisplayName(displayName);
     }
 
-    public void SetDisplayNameServer(ProxiedPlayer p){
+    public void SetDisplayNameServer(final ProxiedPlayer p){
         String displayName = null;
         if (playerConfig.getString(p.getUniqueId().toString()) == ""){
             displayName = p.getName();
@@ -187,6 +188,15 @@ public class Main extends Plugin
         String forwardstr = p.getName() + ", " + displayName;
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         DataOutputStream out = new DataOutputStream(bytes);
+        if(!ProxyServer.getInstance().getPlayer(p.getName()).isConnected()){
+            this.getProxy().getScheduler().schedule(this, new Runnable() {
+                @Override
+                public void run() {
+                    SetDisplayNameServer(p);
+                }
+            }, 1, TimeUnit.SECONDS);
+            return;
+        }
         ServerInfo server = ProxyServer.getInstance().getPlayer(p.getName()).getServer().getInfo();
         try {
             //Write the data
