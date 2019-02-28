@@ -14,7 +14,7 @@ public class GameConfig extends YamlConfiguration {
         super(path, properties);
     }
     @Comment({" ", " Default Config.", " ", "Config_Version: Please do not change."})
-    private Integer Config_Version = 1;
+    private String Version = "1.2.5";
 
     @Comment({"", " ", " The tag that the plugin will show with commands.", " "})
     private String Plugin_Tag = "&f&l[&9BDN&f&l]&r ";
@@ -57,6 +57,8 @@ public class GameConfig extends YamlConfiguration {
                 return Prefix;
             case "Length":
                 return Length.toString();
+            case "Version":
+                return Version;
 
         }
         return null;
@@ -117,6 +119,7 @@ public class GameConfig extends YamlConfiguration {
         switch (str){
             case "Length":
                 return Length;
+
         }
         return null;
     }

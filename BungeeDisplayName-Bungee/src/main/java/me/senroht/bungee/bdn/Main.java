@@ -145,7 +145,7 @@ public class Main extends Plugin
     public void Set_Display_Name(ProxiedPlayer p){
         String displayName = null;
         if (playerConfig.getString(p.getUniqueId().toString()) == ""){
-            displayName = ChatColor.RESET + p.getName() + ChatColor.RESET;
+            displayName = p.getName() + ChatColor.RESET;
             p.setDisplayName(displayName);
             return;
         }
@@ -153,7 +153,7 @@ public class Main extends Plugin
             displayName = playerConfig.getString(p.getUniqueId().toString(), ", ");
         }
         if(configuration.getBoolean("Use_Colors")){
-            displayName = ChatColor.RESET + ChatColor.translateAlternateColorCodes('&', displayName) + ChatColor.RESET;
+            displayName = ChatColor.translateAlternateColorCodes('&', displayName) + ChatColor.RESET;
         }
         if(configuration.getBoolean("Use_Prefix")){
             if(!p.getName().equalsIgnoreCase(displayName)){

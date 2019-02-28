@@ -9,7 +9,7 @@ import java.util.List;
 
 public class AdminOptions implements TabCompleter {
 
-    private static final String[] COMMANDS = { "reload" , "colors", "spaces", "prefix", "length"};
+    private static final String[] COMMANDS = { "reload" , "colors", "spaces", "prefix", "length", "info"};
 
     @Override
     public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] args) {

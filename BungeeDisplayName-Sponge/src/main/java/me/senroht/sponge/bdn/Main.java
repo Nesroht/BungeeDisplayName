@@ -23,7 +23,7 @@ import java.util.List;
 import static org.spongepowered.api.command.args.GenericArguments.*;
 
 
-@Plugin(id = "bungeedisplayname", name = "BungeeDisplayName", version = "1.2.4", description = "Plugin to set nickname over Bungeecord", dependencies=@Dependency(id="nucleus", optional=true))
+@Plugin(id = "bungeedisplayname", name = "BungeeDisplayName", version = "1.2.5", description = "Plugin to set nickname over Bungeecord", dependencies=@Dependency(id="nucleus", optional=true))
 public class Main {
 
     ChannelRegistrar channelRegistrar;
@@ -87,7 +87,7 @@ public class Main {
                 .build());
 
         subCommands.put(Arrays.asList("length"), CommandSpec.builder()
-                .description(Text.of("Toggle limitting nickname length or setting max length"))
+                .description(Text.of("Toggle limiting nickname length or setting max length"))
                 .arguments(seq(choices(Text.of("Arguments"), test3)))
                 .executor(new LengthSubcommand())
                 .build());
@@ -96,6 +96,11 @@ public class Main {
                 .description(Text.of("Toggle the use of Prefix or set Prefix"))
                 .arguments(seq(choices(Text.of("Arguments"), test2)))
                 .executor(new PrefixSubcommand())
+                .build());
+
+        subCommands.put(Arrays.asList("info"), CommandSpec.builder()
+                .description(Text.of("Shows content of config file in chat"))
+                .executor(new InfoSubcommand())
                 .build());
 
         Sponge.getCommandManager().register(this, CommandSpec.builder()

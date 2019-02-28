@@ -34,10 +34,54 @@ public class AdminOptions extends Command {
         else if (strings[0].equals("colors")){
             onColors(commandSender, strings);
         }
+        else if (strings[0].equals("info")){
+            onInfo(commandSender, strings);
+        }
         else{
             commandSender.sendMessage("Unknown command. Type \"/help\" for help.");
         }
 
+    }
+
+    private void onInfo(CommandSender commandSender, String[] strings) {
+        if (main.configuration.getBoolean("Need_Permissions")) {
+            if (commandSender.hasPermission("bdn.admin.info")) {
+                main.Load_Config();
+                if(strings.length == 1){
+                    commandSender.sendMessage(main.pluginTag + ChatColor.GOLD + "Config info for BungeeDisplayName");
+                    commandSender.sendMessage(ChatColor.BLUE + "  |-|" + ChatColor.GOLD + " Version" + ChatColor.RED + ": " + ChatColor.RESET + main.configuration.getString("Version"));
+                    commandSender.sendMessage(ChatColor.BLUE + "  |-|" + ChatColor.GOLD + " Plugin Tag" + ChatColor.RED + ": " + ChatColor.RESET + ChatColor.translateAlternateColorCodes( '&' ,main.configuration.getString("Plugin_Tag")));
+                    commandSender.sendMessage(ChatColor.BLUE + "  |-|" + ChatColor.GOLD + " Need Permissions" + ChatColor.RED + ": " + ChatColor.RESET + main.configuration.getBoolean("Need_Permissions").toString());
+                    commandSender.sendMessage(ChatColor.BLUE + "  |-|" + ChatColor.GOLD + " Whitelist On" + ChatColor.RED + ": " + ChatColor.RESET + main.configuration.getBoolean("Whitelist_On").toString());
+                    commandSender.sendMessage(ChatColor.BLUE + "  |-|" + ChatColor.GOLD + " Whitelisted Servers" + ChatColor.RED + ": " + ChatColor.RESET + main.configuration.getStringList("Whitelisted_Servers"));
+                    commandSender.sendMessage(ChatColor.BLUE + "  |-|" + ChatColor.GOLD + " Use Prefix" + ChatColor.RED + ": " + ChatColor.RESET + main.configuration.getBoolean("Use_Prefix").toString() + ChatColor.BLUE + " | " + ChatColor.GOLD + "Prefix" + ChatColor.RED + ": " + ChatColor.RESET + main.configuration.getString("Prefix"));
+                    commandSender.sendMessage(ChatColor.BLUE + "  |-|" + ChatColor.GOLD + " Length Limit" + ChatColor.RED + ": " + ChatColor.RESET + main.configuration.getBoolean("Length_Limit").toString() + ChatColor.BLUE + " | " + ChatColor.GOLD + "Length" + ChatColor.RED + ": " + ChatColor.RESET + main.configuration.getInt("Length").toString());
+                    commandSender.sendMessage(ChatColor.BLUE + "  |-|" + ChatColor.GOLD + " Use Colors" + ChatColor.RED + ": " + ChatColor.RESET + main.configuration.getBoolean("Use_Colors").toString());
+                    commandSender.sendMessage(ChatColor.BLUE + "  |-|" + ChatColor.GOLD + " Allow Spaces" + ChatColor.RED + ": " +ChatColor.RESET + main.configuration.getBoolean("Allow_Spaces").toString());
+                }
+                else{
+
+                }
+            }
+        }
+        else{
+            main.Load_Config();
+            if(strings.length == 1){
+                commandSender.sendMessage(main.pluginTag + "Config info for BungeeDisplayName");
+                commandSender.sendMessage("Config Version: " + main.configuration.getString("Config_Version"));
+                commandSender.sendMessage("Plugin Tag: " + main.configuration.getString("Plugin_Tag"));
+                commandSender.sendMessage("Need Permissions: " + main.configuration.getString("Need_Permissions"));
+                commandSender.sendMessage("Whitelist On: " + main.configuration.getString("Whitelist_On"));
+                commandSender.sendMessage("Whitelisted Servers: " + main.configuration.getString("Whitelisted_Servers"));
+                commandSender.sendMessage("Prefix: " + main.configuration.getString("Use_Prefix") + " - " + main.configuration.getString("Prefix"));
+                commandSender.sendMessage("Length: " + main.configuration.getString("Length_Limit") + " - " + main.configuration.getString("Length_Limit"));
+                commandSender.sendMessage("Use Colors: " + main.configuration.getString("Use_Colors"));
+                commandSender.sendMessage("Allow Spaces: " + main.configuration.getString("Allow_Spaces"));
+            }
+            else{
+
+            }
+        }
     }
 
     private void onSpaces(CommandSender commandSender, String[] strings) {

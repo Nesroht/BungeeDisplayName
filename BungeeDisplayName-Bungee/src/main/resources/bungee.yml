@@ -4,7 +4,7 @@
 
 name: BungeeDisplayName
 main: me.senroht.bungee.bdn.Main
-version: 1.2.4
+version: 1.2.5
 author: Senroht
 email: sebastianhoye@gmail.com
 commands:
