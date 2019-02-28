@@ -37,7 +37,7 @@ public class ResetDisplay extends Command
             if(commandSender instanceof ProxiedPlayer){
                 ProxiedPlayer pp = (ProxiedPlayer) commandSender;
                 main.Change_Display_Name(pp, pp.getName());
-                pp.sendMessage(main.pluginTag + "Reset your name to: " + pp.getDisplayName());
+                pp.sendMessage(main.pluginTag + "Reset your name to: " + pp.getName());
             }
             else{
                 commandSender.sendMessage(main.pluginTag + "Only a player can change their display name.");

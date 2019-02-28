@@ -29,9 +29,6 @@ public class Main extends JavaPlugin implements TabCompleter {
 
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (label.equalsIgnoreCase("broadcast")){
-            //Setup a way to write the data
-        }
         return false;
     }
 

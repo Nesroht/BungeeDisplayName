@@ -4,7 +4,7 @@
 
 name: BungeeDisplayName
 main: me.senroht.spigot.bdn.Main
-version: 1.2.3
+version: 1.2.4
 author: Senroht
 email: sebastianhoye@gmail.com
 commands:

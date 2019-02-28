@@ -145,7 +145,7 @@ public class Main extends Plugin
     public void Set_Display_Name(ProxiedPlayer p){
         String displayName = null;
         if (playerConfig.getString(p.getUniqueId().toString()) == ""){
-            displayName = p.getName();
+            displayName = ChatColor.RESET + p.getName() + ChatColor.RESET;
             p.setDisplayName(displayName);
             return;
         }
@@ -153,7 +153,7 @@ public class Main extends Plugin
             displayName = playerConfig.getString(p.getUniqueId().toString(), ", ");
         }
         if(configuration.getBoolean("Use_Colors")){
-            displayName = ChatColor.translateAlternateColorCodes('&', displayName) + ChatColor.RESET;
+            displayName = ChatColor.RESET + ChatColor.translateAlternateColorCodes('&', displayName) + ChatColor.RESET;
         }
         if(configuration.getBoolean("Use_Prefix")){
             if(!p.getName().equalsIgnoreCase(displayName)){
@@ -208,8 +208,16 @@ public class Main extends Plugin
         server.sendData("BungeeCord", bytes.toByteArray());
     }
     public void Change_Display_Name(ProxiedPlayer p, String s) {
-        if (configuration.getBoolean("Whitelist_On")) {
-            if (configuration.getStringList("Whitelisted_Servers").contains(p.getServer().getInfo().getName())) {
+        if (p.getName() != s) {
+            if (configuration.getBoolean("Whitelist_On")) {
+                if (configuration.getStringList("Whitelisted_Servers").contains(p.getServer().getInfo().getName())) {
+                    playerConfig.set(p.getUniqueId().toString(), s);
+                    Save_Player_Config(); //Re
+                    Load_Player_Config(); //Load
+                    Set_Display_Name(p);
+                    SetDisplayNameServer(p);
+                }
+            } else {
                 playerConfig.set(p.getUniqueId().toString(), s);
                 Save_Player_Config(); //Re
                 Load_Player_Config(); //Load
@@ -217,8 +225,8 @@ public class Main extends Plugin
                 SetDisplayNameServer(p);
             }
         }
-        else {
-            playerConfig.set(p.getUniqueId().toString(), s);
+        else{
+            playerConfig.set(p.getUniqueId().toString(),null);
             Save_Player_Config(); //Re
             Load_Player_Config(); //Load
             Set_Display_Name(p);
