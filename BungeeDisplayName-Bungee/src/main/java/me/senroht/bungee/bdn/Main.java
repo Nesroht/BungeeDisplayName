@@ -110,7 +110,7 @@ public class Main extends Plugin
     //*** Nickname ***
     public void Check_Display_Name(ProxiedPlayer p){
         Load_Player_Config(); //Load
-        if(!p.getName().equalsIgnoreCase(p.getDisplayName())){
+        if(p.getName().equals(p.getDisplayName()) == false){
             if(playerConfig.get(p.getUniqueId().toString()) == null){
                 playerConfig.set(p.getUniqueId().toString(), p.getDisplayName());
                 Save_Player_Config(); //Re
@@ -127,7 +127,7 @@ public class Main extends Plugin
     }
     public void CheckDisplayNameServer(ProxiedPlayer p){
         Load_Player_Config(); //Load
-        if(!p.getName().equalsIgnoreCase(p.getDisplayName())){
+        if(p.getName().equals(p.getDisplayName()) == false){
             if(playerConfig.get(p.getUniqueId().toString()) == null){
                 playerConfig.set(p.getUniqueId().toString(), p.getDisplayName());
                 Save_Player_Config(); //Re
@@ -145,7 +145,7 @@ public class Main extends Plugin
     public void Set_Display_Name(ProxiedPlayer p){
         String displayName = null;
         if (playerConfig.getString(p.getUniqueId().toString()) == ""){
-            displayName = p.getName() + ChatColor.RESET;
+            displayName = p.getName();
             p.setDisplayName(displayName);
             return;
         }

@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="BungeeDisplayName-Bungee" />
         <module name="BungeeDisplayName-Master" />
-        <module name="BungeeDisplayName-Spigot" />
         <module name="BungeeDisplayName-Sponge" />
+        <module name="BungeeDisplayName-Bungee" />
+        <module name="BungeeDisplayName-Spigot" />
       </profile>
     </annotationProcessing>
   </component>
