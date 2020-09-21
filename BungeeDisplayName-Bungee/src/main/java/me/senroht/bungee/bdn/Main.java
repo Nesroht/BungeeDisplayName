@@ -192,7 +192,7 @@ public class Main extends Plugin
         ProxiedPlayer player = ProxyServer.getInstance().getPlayer(p.getName());
         if(player == null) return;
 
-        if(!player.isConnected()){     // Is this necessary? Wont On_Connect be called if the player comes back online?
+        if(!player.isConnected()){  
             this.getProxy().getScheduler().schedule(this, new Runnable() {
                 @Override
                 public void run() {
