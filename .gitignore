@@ -37,6 +37,6 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
-.idea
+.idea/
 *.iml
 # End of https://www.gitignore.io/api/java,maven
