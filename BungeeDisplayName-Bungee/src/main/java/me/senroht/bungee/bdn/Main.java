@@ -110,7 +110,7 @@ public class Main extends Plugin
     //*** Nickname ***
     public void Check_Display_Name(ProxiedPlayer p){
         Load_Player_Config(); //Load
-        if(p.getName().equals(p.getDisplayName()) == false){
+        if(!p.getName().equals(p.getDisplayName())){
             if(playerConfig.get(p.getUniqueId().toString()) == null){
                 playerConfig.set(p.getUniqueId().toString(), p.getDisplayName());
                 Save_Player_Config(); //Re
@@ -127,7 +127,7 @@ public class Main extends Plugin
     }
     public void CheckDisplayNameServer(ProxiedPlayer p){
         Load_Player_Config(); //Load
-        if(p.getName().equals(p.getDisplayName()) == false){
+        if(!p.getName().equals(p.getDisplayName())){
             if(playerConfig.get(p.getUniqueId().toString()) == null){
                 playerConfig.set(p.getUniqueId().toString(), p.getDisplayName());
                 Save_Player_Config(); //Re
@@ -188,7 +188,11 @@ public class Main extends Plugin
         String forwardstr = p.getName() + ", " + displayName;
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         DataOutputStream out = new DataOutputStream(bytes);
-        if(!ProxyServer.getInstance().getPlayer(p.getName()).isConnected()){
+
+        ProxiedPlayer player = ProxyServer.getInstance().getPlayer(p.getName());
+        if(player == null) return;
+
+        if(!player.isConnected()){     // Is this necessary? Wont On_Connect be called if the player comes back online?
             this.getProxy().getScheduler().schedule(this, new Runnable() {
                 @Override
                 public void run() {
@@ -197,7 +201,7 @@ public class Main extends Plugin
             }, 1, TimeUnit.SECONDS);
             return;
         }
-        ServerInfo server = ProxyServer.getInstance().getPlayer(p.getName()).getServer().getInfo();
+        ServerInfo server = player.getServer().getInfo();
         try {
             //Write the data
             out.writeUTF("BungeeDisplayName");
